@@ -1,12 +1,37 @@
 .titles{
-    color: #000ebd;
+    /*color: #000ebd;*/
+    color: #4775AD;
 }
 
-.black-font{
+.black_font{
     color: #000000;
 }
-
-body{
+.center{
+    text-align: center;
+}
+.connect_style{
+    display: inline
+}
+.resume_body{
     margin: auto;
     width: 50%;
+}
+.image_set {
+    float: left;
+    object-fit: cover;
+    padding: 1%;
+    width:  250px;
+    height: 250px;
+}
+.bin{
+    width: 100%;
+    text-align: center;
+    padding-top: 10%;
+}
+.item {
+    padding:1%;
+    text-align: center;
+    display:inline-block;
+    margin:0 auto;
+    
 }

@@ -76,4 +76,8 @@ a:link {
     text-decoration: none;
     color: black;
   }
+
+  h2, h3, h1, h4, p {
+    margin: 8px;
+  }
  

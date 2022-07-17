@@ -39,3 +39,38 @@
     list-style-type: none;
     display: inline;
 }
+body{
+    margin: 0px;
+    padding: 0px;
+}
+nav{
+    padding: 10px;
+    background-color: #4775AD;
+    border-top: solid;
+    border-bottom: solid;
+    border-left: solid;
+}
+a{
+    text-decoration: none;
+    padding: 10px;
+}
+a:link {
+    text-decoration: none;
+  }
+  
+  a:visited {
+    text-decoration: none;
+    color: black;
+  }
+  
+  a:hover {
+    text-decoration: none;
+    color: black;
+    background-color: #375983;
+  }
+  
+  a:active {
+    text-decoration: none;
+    color: black;
+  }
+ 

@@ -35,3 +35,7 @@
     margin:0 auto;
     
 }
+.navigation{
+    list-style-type: none;
+    display: inline;
+}

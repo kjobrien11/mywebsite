@@ -5,6 +5,7 @@
 
 .black_font{
     color: #000000;
+    font-weight: 800;
 }
 .center{
     text-align: center;
@@ -38,17 +39,19 @@
 .navigation{
     list-style-type: none;
     display: inline;
+    font-size: 22px;
 }
 body{
     margin: 0px;
     padding: 0px;
+    font-family:'Times New Roman', Times, serif
+ 
 }
 nav{
     padding: 10px;
-    background-color: #4775AD;
-    border-top: solid;
-    border-bottom: solid;
-    border-left: solid;
+    
+    background-color: rgb(173, 173, 174);
+    box-shadow: 1px 1px 1px 1px;
 }
 a{
     text-decoration: none;
@@ -66,7 +69,7 @@ a:link {
   a:hover {
     text-decoration: none;
     color: black;
-    background-color: #375983;
+    background-color: rgb(153, 153, 154);
   }
   
   a:active {

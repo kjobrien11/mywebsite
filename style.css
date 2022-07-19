@@ -28,7 +28,7 @@
  
     object-fit: cover;
     padding: 1%;
-
+    width: 50%;
     border-radius: 10%;
 }
 .bin{

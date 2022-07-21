@@ -16,9 +16,6 @@ p{
     margin: 0px;
 }
 .input_field{
-    display:flex; 
-    flex-direction: row; 
-    align-items: center;
     margin-top: 5px;
 }
 body{
@@ -37,4 +34,16 @@ input{
     border: none;
     color: white;
 }
+/*via https://stackoverflow.com/questions/6713435/input-box-100-width-with-label-to-the-left*/
+.left {
+    float: left;
+}
 
+.left2 {
+    overflow: hidden;
+    display: block;
+    padding: 0 4px 0 10px
+}
+.left2 input {
+    width: 100%
+}

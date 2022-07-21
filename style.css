@@ -4,11 +4,13 @@
 .control_buttons{
     padding: 5px;
     border: solid;
-    border-bottom: none;   
+    border-bottom: solid;   
+    border-color: rgb(95, 93, 100);
+    border-bottom-color: rgb(2, 2, 2);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     background-color: rgb(55, 53, 60);
-    border-color: rgb(95, 93, 100);
+    
 
 
 }

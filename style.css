@@ -1,5 +1,16 @@
+.button_style{
+    padding: 3px;
+}
 .control_buttons{
-    
+    padding: 5px;
+    border: solid;
+    border-bottom: none;   
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: rgb(55, 53, 60);
+    border-color: rgb(95, 93, 100);
+
+
 }
 p{
     margin: 0px;
@@ -8,10 +19,12 @@ p{
     display:flex; 
     flex-direction: row; 
     align-items: center;
+    margin-top: 5px;
 }
 body{
-    background-color: rgb(32, 33, 33);
+    background-color: rgb(30, 30, 30);
     padding: 0px;
+    margin: 0px;
     color: white;
 
 }
@@ -20,7 +33,7 @@ body{
     font-family: 'Menlo', sans-serif;
 }
 input{
-    background-color: rgb(32, 33, 33);
+    background-color: rgb(30, 30, 30);
     border: none;
     color: white;
 }

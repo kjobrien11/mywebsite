@@ -1,7 +1,27 @@
-body{
-    background-color: black;
+.control_buttons{
+    
 }
 p{
+    margin: 0px;
+}
+.input_field{
+    display:flex; 
+    flex-direction: row; 
+    align-items: center;
+}
+body{
+    background-color: rgb(32, 33, 33);
+    padding: 0px;
+    color: white;
+
+}
+.cmd_font{
     color: white; 
     font-family: 'Menlo', sans-serif;
 }
+input{
+    background-color: rgb(32, 33, 33);
+    border: none;
+    color: white;
+}
+

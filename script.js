@@ -8,5 +8,8 @@ function parseInput() {
     if(inp =="connect.html"){
         window.location.href = "connect.html";
     }
+    if(inp =="about.html"){
+        window.location.href = "about.html";
+    }
   }
  

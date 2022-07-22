@@ -13,3 +13,6 @@ function parseInput() {
     }
   }
  
+  function redClick(){
+    window.open('', '_self', ''); window.close();
+  }

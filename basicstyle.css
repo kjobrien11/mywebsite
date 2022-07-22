@@ -43,16 +43,16 @@
     margin:0 auto;
     
 }
-.navigation{
-    list-style-type: none;
-    display: inline;
-    font-size: 22px;
-}
 body{
     margin: 0px;
     padding: 0px;
     font-family:'Times New Roman', Times, serif
  
+} 
+.navigation{
+    list-style-type: none;
+    display: inline;
+    font-size: 22px;
 }
 nav{
     padding: 10px;
@@ -87,4 +87,20 @@ a:link {
   h2, h3, h1, h4, p {
     margin: 8px;
   }
- 
+.button_style{
+    padding: 3px;
+}
+.control_buttons{
+    padding: 5px;
+    border: solid;
+    border-bottom: solid;   
+    border-color: rgb(95, 93, 100);
+    border-bottom-color: rgb(2, 2, 2);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: rgb(55, 53, 60);
+
+}
+.dark_background{
+    background-color: rgb(55, 53, 60);
+}

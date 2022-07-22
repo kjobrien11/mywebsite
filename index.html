@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <div class = "control_buttons">
@@ -16,7 +17,9 @@
     <div class = "input_field">
 
         <label class = "cmd_font left" for="fname">(base) kjobrien@KJs-MacBook-Pro kjobrienweb %</label>
-        <span class="left2"><input type="text" id="input" class = "cmd_font" name="input" placeholder="_"></span>
+        <span class="left2"><input id="userInput" class = "cmd_font" placeholder="_"></span>
+        <button onclick="parseInput()">Run</button>
+        
  
     </div>
 </body>

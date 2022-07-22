@@ -1,4 +1,12 @@
-
+let input = document.querySelector('input');
+input.addEventListener('keyup', (e) => {
+    if(e.key === 'Enter') {
+        parseInput();
+    }
+})
+function redClick(){
+    window.open('', '_self', ''); window.close();
+}
 function parseInput() {
 
     var inp = document.getElementById("userInput").value
@@ -11,8 +19,7 @@ function parseInput() {
     if(inp =="about.html"){
         window.location.href = "about.html";
     }
-  }
- 
-  function redClick(){
-    window.open('', '_self', ''); window.close();
-  }
+}
+
+
+  

@@ -1,3 +1,4 @@
+//via https://www.fwait.com/
 let input = document.querySelector('input');
 input.addEventListener('keyup', (e) => {
     if(e.key === 'Enter') {

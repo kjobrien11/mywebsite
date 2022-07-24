@@ -1,5 +1,5 @@
 .button_style{
-    padding: 3px;
+    padding: 0px;
 }
 .control_buttons{
     padding: 5px;
@@ -46,16 +46,9 @@ input{
     border: none;
     color: white;
 }
-/*via https://stackoverflow.com/questions/6713435/input-box-100-width-with-label-to-the-left*/
-.left {
-    float: left;
-}
 
-.left2 {
-    overflow: hidden;
-    display: block;
-    padding: 0 4px 0 10px
-}
-.left2 input {
-    width: 100%
+.left{
+    padding-left: 3px;
+    padding-top: 3px;
+
 }

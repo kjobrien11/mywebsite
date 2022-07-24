@@ -1,4 +1,12 @@
 //via https://www.fwait.com/
+class RowData {
+    constructor(command, page) {
+      this.command = command;
+      this.page = page;
+    }
+  }
+const tableData = [];
+
 let input = document.querySelector('input');
 input.addEventListener('keyup', (e) => {
     if(e.key === 'Enter') {
@@ -12,6 +20,8 @@ function redClick(){
 }
 
 function getCall(querry){
+    displayRow(querry);
+    document.getElementById("userInput").value = "";
     if(querry[0] == "pwd"){
 
     }
@@ -20,21 +30,31 @@ function getCall(querry){
     }else if(querry[0] == "ls"){
         
     }else{
-        alert('zsh: command not found: ' + querry[0])
+        addRow('zsh: command not found: ' + querry[0], " ", document.getElementById("gui").rows.length-1);
     }
 }
-function addRow(querry){
-  var table = document.getElementById("gui");
-  var row = table.insertRow(document.getElementById("gui").rows.length-1);
-  var cell1 = row.insertCell(0);
-  var cell2 = row.insertCell(1);
-  cell1.innerHTML = "(base) kjobrien@KJs-MacBook-Pro kjobrienweb %";
-  cell2.innerHTML = querry[0] + " " + querry[1];
+function addRow(c, p, s){
+    var table = document.getElementById("gui");
+    var row = table.insertRow(s);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    cell1.innerHTML = "(base) kjobrien@KJs-MacBook-Pro kjobrienweb %";
+    cell2.innerHTML = c + " " + p;
 }
+function displayRow(querry){
+  alert(tableData.length);
+  tableData.push(new RowData(querry[0], querry[1]));
+  alert(tableData.length);
+  addRow(querry[0], querry[1], document.getElementById("gui").rows.length-1);
+  
+}
+
 function parseInput(querry) {
-    document.getElementById("userInput").value = "";
+    
     var inp = querry[1];
-    addRow(querry);
+    sessionStorage.setItem('arr', tableData);
+    a = sessionStorage.getItem('arr');
+    alert(a.command);
     if(inp =="resume.html"){
         window.location.href = "resume.html";
     }
@@ -45,9 +65,19 @@ function parseInput(querry) {
         window.location.href = "about.html";
     }
     else{
-        alert('The file /Users/kjobrien/Desktop/kjobrienweb/' + inp +' does not exist.');
+        addRow('The file /Users/kjobrien/Desktop/kjobrienweb/' + inp +' does not exist.', " ", document.getElementById("gui").rows.length-1);
     }
 }
+function reconstructTable(){
+   
+    tableData = sessionStorage.getItem('arr');
 
+    alert(tableData.length);
+    for (let i = 0; i < tableData.length; i++) {
+        let cur = tableData[i];
+        addRow(cur.command, cur.page, i);
+        console.log("creating: ");
+      }
+}
 
   

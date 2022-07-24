@@ -15,8 +15,18 @@
 p{
     margin: 0px;
 }
+#title{
+    width: 1px; 
+    white-space: nowrap;
+}
 .input_field{
     margin-top: 5px;
+}
+table{
+    width: 100%;
+}
+#userInput{
+    width: 99%;
 }
 body{
     background-color: rgb(30, 30, 30);

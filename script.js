@@ -13,7 +13,7 @@ function redClick(){
 
 function getCall(querry){
     if(querry[0] == "pwd"){
-
+        
     }
     else if(querry[0] == "open"){
         parseInput(querry[1]);

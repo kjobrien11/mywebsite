@@ -46,7 +46,8 @@
 body{
     margin: 0px;
     padding: 0px;
-    font-family:'Times New Roman', Times, serif
+    /*font-family:'Times New Roman', Times, serif*/
+    font-family: 'Menlo', sans-serif;
  
 } 
 .navigation{
@@ -88,7 +89,12 @@ a:link {
     margin: 8px;
   }
 .button_style{
-    padding: 3px;
+    padding-left: 0px;
+}
+.left{
+    padding-left: 3px;
+    padding-top: 3px;
+
 }
 .control_buttons{
     padding: 5px;
@@ -102,5 +108,7 @@ a:link {
 
 }
 .dark_background{
+    margin: 0px;
+    padding: 0px;
     background-color: rgb(55, 53, 60);
 }

@@ -68,6 +68,9 @@ function addRow(c, p, s){
     let row = table.insertRow(s);
     let cell1 = row.insertCell(0);
     let cell2 = row.insertCell(1);
+    if(p == null){
+        p = "";
+    }
     cell1.innerHTML = '(base) kjobrien@KJs-MacBook-Pro kjobrienweb %';
     cell2.innerHTML = c + ' ' + p;
 }

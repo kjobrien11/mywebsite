@@ -1,4 +1,5 @@
 //via https://www.fwait.com/
+//fix edge case >2 input
 class RowData {
     constructor(command, page) {
       this.command = command;
@@ -44,11 +45,24 @@ function getCall(querry){
     if(querry[0] == 'ls'){
         displayRow(querry[0], '');
         addRow('about.html connect.html resume.html', '', document.getElementById('gui').rows.length-1);
+        formatForSession('ls', '');
+        formatForSession('about.html connect.html resume.html', '');
     }
     else if(querry[0] == 'open'){
         displayRow(querry[0], querry[1]);
         parseInput(querry); 
-    }else{
+    }else if(querry[0] == 'help'){
+        displayRow(querry[0], querry[1]);
+        addRow('commands: open, ls, help, clear', '', document.getElementById('gui').rows.length-1);
+        formatForSession('help', '');
+        formatForSession('commands: open, ls, help, clear', '');
+
+    }else if(querry[0] == 'clear'){
+        let t = []
+        sessionStorage.setItem('array', JSON.stringify(t));
+        window.location.href = 'index.html';
+    }
+    else{
         console.log(querry.length)
         if(querry.length == 1){
             displayRow(querry[0], " ");

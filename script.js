@@ -18,41 +18,6 @@ function redClick(){
     window.open('', '_self', ''); 
     window.close();
 }
-
-function getCall(querry){
-    
-    document.getElementById('userInput').value = '';
-    if(querry[0] == 'ls'){
-        displayRow(querry[0], '');
-        addRow('about.html connect.html resume.html', '', document.getElementById('gui').rows.length-1);
-
-    }
-    else if(querry[0] == 'open'){
-        displayRow(querry[0], querry[1]);
-        parseInput(querry); 
-    }else{
-        displayRow(querry[0], querry[1]);
-        addRow('zsh: command not found: ' + querry[0], ' ', document.getElementById('gui').rows.length-1);
-        formatForSession('zsh: command not found: ' + querry[0], ' ');
-    }
-}
-function addRow(c, p, s){
-    //via w3schools
-    let table = document.getElementById('gui');
-    let row = table.insertRow(s);
-    let cell1 = row.insertCell(0);
-    let cell2 = row.insertCell(1);
-    cell1.innerHTML = '(base) kjobrien@KJs-MacBook-Pro kjobrienweb %';
-    cell2.innerHTML = c + ' ' + p;
-}
-function displayRow(c, p){
-  //alert(tableData.length);
-  tableData.push(new RowData(c, p));
-  //alert(tableData.length);
-  addRow(c, p, document.getElementById('gui').rows.length-1);
-  
-}
-
 function dealWithSession(querry){
     if(sessionStorage.length != 0){
         let t = JSON.parse(sessionStorage.getItem('array'));
@@ -72,6 +37,46 @@ function formatForSession(q1, q2){
     temparr.push(q2);
     dealWithSession(temparr);
 }
+
+function getCall(querry){
+    
+    document.getElementById('userInput').value = '';
+    if(querry[0] == 'ls'){
+        displayRow(querry[0], '');
+        addRow('about.html connect.html resume.html', '', document.getElementById('gui').rows.length-1);
+    }
+    else if(querry[0] == 'open'){
+        displayRow(querry[0], querry[1]);
+        parseInput(querry); 
+    }else{
+        console.log(querry.length)
+        if(querry.length == 1){
+            displayRow(querry[0], " ");
+            
+        }else{
+            displayRow(querry[0], querry[1]);
+        }
+        
+        formatForSession(querry);
+        addRow('zsh: command not found: ' + querry[0], ' ', document.getElementById('gui').rows.length-1);
+        formatForSession('zsh: command not found: ' + querry[0], ' ');
+    }
+}
+function addRow(c, p, s){
+    //via w3schools
+    let table = document.getElementById('gui');
+    let row = table.insertRow(s);
+    let cell1 = row.insertCell(0);
+    let cell2 = row.insertCell(1);
+    cell1.innerHTML = '(base) kjobrien@KJs-MacBook-Pro kjobrienweb %';
+    cell2.innerHTML = c + ' ' + p;
+}
+function displayRow(c, p){
+  tableData.push(new RowData(c, p));
+  addRow(c, p, document.getElementById('gui').rows.length-1);
+  
+}
+
 
 function parseInput(querry) {
     
@@ -101,8 +106,9 @@ function parseInput(querry) {
 function reconstructTable(){
    
     if(sessionStorage.length != 0){
+        
         let t = JSON.parse(sessionStorage.getItem('array'));
-        for (let i = 0; i <= t.length/2; i=i+2) {
+        for (let i = 0; i <= t.length-1; i=i+2) {
             addRow(t[i], t[i+1], document.getElementById('gui').rows.length-1);
         }
     }

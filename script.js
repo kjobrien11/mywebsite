@@ -1,5 +1,4 @@
 //via https://www.fwait.com/
-//fix edge case >2 input
 class RowData {
     constructor(command, page) {
       this.command = command;
@@ -132,5 +131,3 @@ function reconstructTable(){
     
     
 }
-
-  //find out why it isnt working with object, fix the json

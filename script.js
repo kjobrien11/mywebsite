@@ -129,5 +129,8 @@ function reconstructTable(){
         }
     }
     
-    
+}
+
+function help(){
+    alert('Welcome! This page operates like a mac OS terminal. \r\n\r\nFor a list of the commands type: \”help\” \r\nFor a list of all the files type: \”ls\” \r\nTo open a specific file type: \”open <file>.html\”\r\nTo clear the log type: \”clear\” ');
 }

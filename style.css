@@ -32,14 +32,13 @@ body{
     background-color: rgb(30, 30, 30);
     padding: 0px;
     margin: 0px;
-    color: white;
     color: white; 
-    font-family: 'Menlo', sans-serif;
+    font-family: Menlo, Consolas, sans-serif;
 
 }
 .cmd_font{
     color: white; 
-    font-family: 'Menlo', sans-serif;
+    font-family: Menlo, Consolas, sans-serif;
 }
 input{
     background-color: rgb(30, 30, 30);
@@ -50,5 +49,24 @@ input{
 .left{
     padding-left: 3px;
     padding-top: 3px;
-
+}
+.lower_container{
+    display: flex;
+    position: fixed;
+    bottom: 0px;
+    right: 0px; 
+    padding: 10px;
+}
+.lower_button{
+    margin: 5px;
+    padding: 5px;
+    flex:1;
+    border:solid;
+    border-color: white;
+    border-radius: 5%;
+    background-color: white;
+    color:rgb(55, 53, 60);
+}
+.remove_underline{
+    text-decoration: none;
 }

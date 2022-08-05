@@ -134,3 +134,18 @@ function reconstructTable(){
 function help(){
     alert('Welcome! This page operates like a mac OS terminal. \r\n\r\nFor a list of the commands type: \”help\” \r\nFor a list of all the files type: \”ls\” \r\nTo open a specific file type: \”open <file>.html\”\r\nTo clear the log type: \”clear\” ');
 }
+
+//via https://stackoverflow.com/questions/3514784/what-is-the-best-way-to-detect-a-mobile-device
+function isMobile() {
+    try{ document.createEvent("TouchEvent"); return true; }
+        catch(e){ return false; 
+    }
+  }
+
+  function checkMobile(){
+    if(isMobile()){
+        var z = document.getElementById("_body");
+        z.style.zoom = '50%';
+    }else{
+    }
+  }

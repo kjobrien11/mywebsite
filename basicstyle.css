@@ -112,3 +112,18 @@ a:link {
     padding: 0px;
     background-color: rgb(55, 53, 60);
 }
+.fb{
+    display: flex;
+}
+.bin2{
+    width: 100%;
+    text-align: center;
+}
+
+.box{
+    margin: 2%;
+    /*background-color: rgb(233, 233, 233);*/
+    background-color: rgb(211, 211, 211);
+    padding: 2%;
+    box-shadow: 5px 10px 8px #bfbfbf;
+}
